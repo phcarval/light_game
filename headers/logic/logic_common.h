@@ -1,0 +1,38 @@
+#ifndef LOGIC_COMMON_H
+#define LOGIC_COMMON_H
+
+enum DIRECTION {UP, RIGHT, DOWN, LEFT};
+
+enum TILE_TYPE {BLANK = 0,
+				UNUSABLE, //can't place anything on them, different from BLANK
+
+				DIAGONAL_ULDR, // this -> ( \ )
+				DIAGONAL_URDL, // this -> ( / )
+
+				SPLITTER_RIGHT,
+				SPLITTER_LEFT,
+				SPLITTER_UP,
+				SPLITTER_DOWN,
+
+				DEST_RIGHT,
+				DEST_LEFT,
+				DEST_UP,
+				DEST_DOWN,
+
+				SOURCE_RIGHT,
+				SOURCE_LEFT,
+				SOURCE_UP,
+				SOURCE_DOWN,
+
+				PAINTER_RED_VERTICAL,
+				PAINTER_RED_HORIZONTAL,
+				PAINTER_GREEN_VERTICAL,
+				PAINTER_GREEN_HORIZONTAL,
+				PAINTER_BLUE_VERTICAL,
+				PAINTER_BLUE_HORIZONTAL,
+
+				OBSTACLE,
+
+				ERROR /* must be the maximum value! */};
+
+#endif //LOGIC_COMMON_H
